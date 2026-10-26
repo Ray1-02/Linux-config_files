@@ -1,5 +1,19 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display":{
+	  "color":{
+		  "keys":"blue",
+		  "title":"italic_red"
+	  },
+	  "percent":{
+		  "type":9,
+		  "color":{
+			  "green":"italic_default",
+			  "yellow":"italic_light_yellow",
+			  "red":"italic_light_red"
+		  }
+	  }
+  },
   "modules": [
     "title",
     "separator",
@@ -19,8 +33,24 @@
     "theme",
     "cpu",
     "gpu",
-    "memory",
-    "disk",
+    {
+	    "type":"memory",
+	    "key":"Memory",
+	    "percent":{
+		    "type":9,
+		    "green":30,
+		    "yellow":60
+	  }
+    },
+    {
+	    "type":"disk",
+	    "key":"Disk",
+	    "percent":{
+		    "type":9,
+		    "green":40,
+		    "yellow":80
+	  }
+    },
     "display",
     "battery",
     "poweradapter",
@@ -35,7 +65,7 @@
 	    "type": "datetime",
 	    "key": "DateTime"
     },
-    "seperator",
-    "colors"
+    "separator",
+    "wallpaper"
   ]
 }
